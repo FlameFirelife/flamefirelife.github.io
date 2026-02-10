@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flamegifs' Portfolio</title>
+  <style>
+    /* ===== Reset & Basic Styles ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Helvetica', 'Arial', sans-serif;
+      background: #0b0b0b;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    a {
+      color: #ff3cac;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== Header ===== */
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: #aaa;
+    }
+
+    /* ===== GIF Grid ===== */
+    .gif-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 1000px;
+    }
+    .gif-grid img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    .gif-grid img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ff3cac;
+    }
+
+    /* ===== Footer / Contact ===== */
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    footer a {
+      margin: 0 0.5rem;
+    }
+
+    /* ===== Responsive tweaks ===== */
+    @media (max-width: 500px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+
+    /* ===== Lightbox (GIF Expand) ===== */
+    .lightbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.25s ease;
+        z-index: 1000;
+    }
+
+    .lightbox.active {
+        opacity: 1;
+        pointer-events: all;
+}
+
+    .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
+        box-shadow: 0 0 40px #ff3cac;
+        transform: scale(0.9);
+        transition: transform 0.25s ease;
+}
+
+.lightbox.active img {
+    transform: scale(1);
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- ===== Header ===== -->
+  <header>
+    <h1>Flamegifs' Portfolio</h1>
+    <p>DBZ / DBS / Anime GIFs Empire</p>
+  </header>
+
+  <!-- ===== GIF Grid ===== -->
+  <div class="gif-grid">
+    <!-- Replace with your GIFs -->
+    <img src="gifs/gokublack-goated.gif" alt="Goku Black GOATED">
+    <img src="gifs/gokublack-wth.gif" alt="Goku Black WTh">
+    <img src="gifs/gokublack-son.gif" alt="Goku Black saying SON">
+    <img src="gifs/gokublack-worsethanme.gif" alt="Goku Black saying Worse Than Me?">
+    <img src="gifs/zamasu-washeright.gif" alt="Unexpected GOAT Moment">
+  </div>
+
+  <!-- ===== Footer / Contact ===== -->
+  <footer>
+    <p>Follow me on: 
+      <a href="https://instagram.com/flamegifs" target="_blank">@flamegifs (IG)</a> |
+      <a href="https://github.com/flamefirelife" target="_blank">@flamefirelife (GitHub)</a> |
+      <a href="https://giphy.com/flamegifs" target="_blank">@flamegifs (GIPHY)</a>
+    </p>
+  </footer>
+
+  <!-- ===== Lightbox ===== -->
+<div class="lightbox" id="lightbox">
+  <img src="" alt="Expanded GIF">
+</div>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox.querySelector('img');
+  const gifs = document.querySelectorAll('.gif-grid img');
+
+  gifs.forEach(gif => {
+    gif.addEventListener('click', () => {
+      lightboxImg.src = gif.src;
+      lightbox.classList.add('active');
+    });
+  });
+
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+    lightboxImg.src = '';
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    }
+  });
+</script>
+
+</body>
+</html>
