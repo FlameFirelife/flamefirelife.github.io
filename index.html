@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FlameDev's projects. Foxash, a programming language, and HELIOS, a Roblox Scripter role submission.">
+  <meta name="theme-color" content="#070e09">
+  <meta property="og:title" content="FlameDev | stuff i've been building">
+  <meta property="og:description" content="Foxash, Roblox scripting, and the code behind both.">
+  <title>FlameDev | stuff i've been building</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/martian-1.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">skip to content</a>
+  <header class="site-header">
+    <nav class="container navigation" aria-label="Main navigation">
+      <a class="wordmark" href="#main" aria-label="FlameDev home">flamedev<span aria-hidden="true">_</span></a>
+      <div class="nav-links"><a href="#general">General</a><a href="#roblox">Roblox</a><a href="https://github.com/FlameFirelife">GitHub</a></div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="container intro-layout">
+        <div class="intro-copy">
+          <h1 id="intro-title">Foxash and some Roblox stuff.</h1>
+          <p class="lead">i'm FlameDev, and here's what i've been building.</p>
+          <div class="actions"><a class="button primary" href="#general">General</a><a class="button" href="#roblox">Roblox</a></div>
+          <div class="hero-code" aria-label="Foxash hello world example"><code>write("Hello, Foxash!")</code></div>
+        </div>
+        <figure class="glyph-figure" aria-label="The Foxash fox mark rendered in its own source characters">
+          <img class="glyph-fallback" src="assets/foxash-mark.svg" width="448" height="472" alt="Foxash fox mark">
+          <canvas class="glyph-canvas" aria-hidden="true"></canvas>
+          <figcaption>the Foxash mark, made of Foxash</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="general section" id="general" aria-labelledby="general-title">
+      <div class="container">
+        <div class="section-heading"><h2 id="general-title">General</h2><a href="https://github.com/FlameFirelife/foxash">Foxash on GitHub</a></div>
+        <article class="foxash-overview" aria-labelledby="foxash-title">
+          <div class="project-copy"><h3 id="foxash-title">Foxash</h3><p class="lead">a programming language i'm building around readable syntax and simple commands.</p><p>i wrote the interpreter in Rust. it has variables, functions, named loops, JSON support, and its own command-line tools.</p><a class="plain-link" href="https://github.com/FlameFirelife/foxash/releases">get Foxash</a></div>
+          <dl class="command-reference"><div><dt><code>foxash run</code></dt><dd>run a .foxash file</dd></div><div><dt><code>foxash check</code></dt><dd>check syntax without running it</dd></div><div><dt><code>foxash help</code></dt><dd>see the commands</dd></div></dl>
+        </article>
+      </div>
+    </section>
+    <section class="examples section" aria-labelledby="examples-title">
+      <div class="container">
+        <div class="section-heading"><h2 id="examples-title">a bit of Foxash</h2><a href="https://github.com/FlameFirelife/foxash/blob/main/DOCUMENTATION.md">full docs</a></div>
+        <div class="sample-controls" role="tablist" aria-label="Foxash examples" hidden><button type="button" role="tab" id="hello-tab" aria-controls="hello-panel" aria-selected="true">hello</button><button type="button" role="tab" id="variables-tab" aria-controls="variables-panel" aria-selected="false" tabindex="-1">variables</button><button type="button" role="tab" id="functions-tab" aria-controls="functions-panel" aria-selected="false" tabindex="-1">functions</button></div>
+        <div class="example-panel" id="hello-panel" role="tabpanel" aria-labelledby="hello-tab"><div class="code-heading"><span>hello.foxash</span><button class="copy-button" type="button" data-copy="hello-panel" hidden>copy code</button></div><pre class="sample-code"><code><span class="syntax-call">write</span>(<span class="syntax-string">"Hello, Foxash!"</span>)</code></pre><div class="example-output"><span>example output</span><samp>Hello, Foxash!</samp></div></div>
+        <div class="example-panel" id="variables-panel" role="tabpanel" aria-labelledby="variables-tab"><div class="code-heading"><span>variables.foxash</span><button class="copy-button" type="button" data-copy="variables-panel" hidden>copy code</button></div><pre class="sample-code"><code><span class="syntax-keyword">define</span> name = <span class="syntax-string">"Flame"</span>
+<span class="syntax-call">write</span>(<span class="syntax-string">"Hello, "</span> + name + <span class="syntax-string">"!"</span>)</code></pre><div class="example-output"><span>example output</span><samp>Hello, Flame!</samp></div></div>
+        <div class="example-panel" id="functions-panel" role="tabpanel" aria-labelledby="functions-tab"><div class="code-heading"><span>functions.foxash</span><button class="copy-button" type="button" data-copy="functions-panel" hidden>copy code</button></div><pre class="sample-code"><code><span class="syntax-keyword">function</span> greet(name) {
+    <span class="syntax-call">write</span>(<span class="syntax-string">"Hello, "</span> + name + <span class="syntax-string">"!"</span>)
+}
+
+greet(<span class="syntax-string">"Flame"</span>)</code></pre><div class="example-output"><span>example output</span><samp>Hello, Flame!</samp></div></div>
+        <p class="sample-note">these are examples from the docs. the interpreter runs on your computer.</p>
+        <p class="copy-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+    <section class="roblox section" id="roblox" aria-labelledby="roblox-title">
+      <div class="container">
+        <div class="section-heading"><h2 id="roblox-title">Roblox</h2><span>Luau / Roblox Studio</span></div>
+        <div class="helios-heading"><h3>HELIOS</h3><p class="scope-note">Scripter role application submission</p></div>
+        <p class="helios-description">i made this for a role application. it's a small co-op scripting showcase, not a fully-fledged game.</p>
+        <figure class="game-figure"><a href="https://youtu.be/tBULAf-sEAo" aria-label="Watch the HELIOS submission video on YouTube"><img src="assets/helios.jpg" width="1590" height="840" alt="Two players in HELIOS, with the security and ventilation circuits powered and the exit waiting for safe air." loading="lazy"></a><figcaption>supplies, repairs, power, ventilation, and evacuation all depend on each other.</figcaption></figure>
+        <div class="helios-details"><p>tested multiplayer on PC and my A34, plus saving after rejoining. the demo also shows adding circuit C and cancelling an action without losing materials.</p><div class="actions"><a class="button primary" href="https://youtu.be/tBULAf-sEAo">watch the demo</a><a class="button" href="https://github.com/FlameFirelife/RoDevs-Submission">read the code</a></div></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container"><p>more stuff as i build it.</p><div class="footer-links"><a href="https://github.com/FlameFirelife">find me on GitHub</a><a href="#main">back to top</a></div></div></footer>
+  <script src="script.js" defer></script>
+</body>
+</html>
