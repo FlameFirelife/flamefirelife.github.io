@@ -6,6 +6,8 @@ some stuff i've been building, split into General and Roblox.
 
 [Foxash](https://github.com/FlameFirelife/foxash), the programming language i'm working on. the site has a few examples of its syntax, with links to the source and docs.
 
+[ChessAsh](https://github.com/FlameFirelife/ChessAsh), my chess review app for Windows and Android. it runs Stockfish on your device, and the Windows version uses Foxash for its review rules.
+
 ## Roblox
 
 [HELIOS](https://github.com/FlameFirelife/RoDevs-Submission), a small co-op scripting showcase i made for a Scripter role application. it's not a fully-fledged game.

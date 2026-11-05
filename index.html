@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="FlameDev's projects. Foxash, a programming language, and HELIOS, a Roblox Scripter role submission.">
+  <meta name="description" content="FlameDev's projects: Foxash, ChessAsh, and HELIOS, a Roblox Scripter role submission.">
   <meta name="theme-color" content="#070e09">
   <meta property="og:title" content="FlameDev | stuff i've been building">
-  <meta property="og:description" content="Foxash, Roblox scripting, and the code behind both.">
+  <meta property="og:description" content="Foxash, ChessAsh, Roblox scripting, and the code behind them.">
   <title>FlameDev | stuff i've been building</title>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="assets/fonts/martian-1.ttf" as="font" type="font/ttf" crossorigin>
@@ -24,7 +24,7 @@
     <section class="hero" aria-labelledby="intro-title">
       <div class="container intro-layout">
         <div class="intro-copy">
-          <h1 id="intro-title">Foxash and some Roblox stuff.</h1>
+          <h1 id="intro-title">Foxash, chess and Roblox stuff.</h1>
           <p class="lead">i'm FlameDev, and here's what i've been building.</p>
           <div class="actions"><a class="button primary" href="#general">General</a><a class="button" href="#roblox">Roblox</a></div>
           <div class="hero-code" aria-label="Foxash hello world example"><code>write("Hello, Foxash!")</code></div>
@@ -43,6 +43,7 @@
           <div class="project-copy"><h3 id="foxash-title">Foxash</h3><p class="lead">a programming language i'm building around readable syntax and simple commands.</p><p>i wrote the interpreter in Rust. it has variables, functions, named loops, JSON support, and its own command-line tools.</p><a class="plain-link" href="https://github.com/FlameFirelife/foxash/releases">get Foxash</a></div>
           <dl class="command-reference"><div><dt><code>foxash run</code></dt><dd>run a .foxash file</dd></div><div><dt><code>foxash check</code></dt><dd>check syntax without running it</dd></div><div><dt><code>foxash help</code></dt><dd>see the commands</dd></div></dl>
         </article>
+
       </div>
     </section>
     <section class="examples section" aria-labelledby="examples-title">
@@ -59,6 +60,14 @@
 greet(<span class="syntax-string">"Flame"</span>)</code></pre><div class="example-output"><span>example output</span><samp>Hello, Flame!</samp></div></div>
         <p class="sample-note">these are examples from the docs. the interpreter runs on your computer.</p>
         <p class="copy-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+    <section class="chessash section" aria-labelledby="chessash-title">
+      <div class="container">
+        <article class="foxash-overview chessash-overview" id="chessash" aria-labelledby="chessash-title">
+          <div class="project-copy"><h2 id="chessash-title">ChessAsh</h2><p class="lead">a free chess review app for Windows and Android.</p><p>import a finished Chess.com game or a PGN, see where things went wrong, and try a better move. Stockfish runs on your device, and saved reviews work offline.</p><p>the Windows app uses Foxash for its review rules too.</p><div class="actions project-actions"><a class="button primary" href="https://github.com/FlameFirelife/ChessAsh/releases/latest">get ChessAsh</a><a class="button" href="https://github.com/FlameFirelife/ChessAsh">read the code</a></div></div>
+          <dl class="command-reference"><div><dt>import a game</dt><dd>from Chess.com or a PGN file</dd></div><div><dt>review the moves</dt><dd>engine lines, move labels and explanations</dd></div><div><dt>retry a position</dt><dd>try another move and compare alternatives</dd></div></dl>
+        </article>
       </div>
     </section>
     <section class="roblox section" id="roblox" aria-labelledby="roblox-title">

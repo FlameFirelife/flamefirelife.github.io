@@ -137,3 +137,7 @@ code, pre, samp { font-family: var(--font-outlier); font-stretch: var(--stretch-
   .footer-links a { font-size: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+.chessash-overview h2 { margin-bottom: var(--space-lg); }
+.project-actions { margin-top: var(--space-lg); }
+@media (max-width: 40rem) { .project-actions { gap: var(--space-sm); } .project-actions .button { padding-inline: var(--space-sm); font-size: 12px; } }
